@@ -66,6 +66,21 @@ header{
     line-height: 3rem;
     margin-top: 1rem;
 }
+
+.card.total{
+    background: #49aa26;
+    color: white;
+}
+/*===================TABLE===================*/
+#data-table{
+    width: 100%;/*pegar todo espaço do container que está inserido*/
+    border-spacing: 0 .5rem;
+}
+
+table td{
+    background: white;
+}
+
 /*===================FOOTER===================*/
 footer{
     text-align: center;
