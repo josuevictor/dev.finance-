@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 93.75%; /*15px*/
+}
+
 body{
     background: #f0f2f5;
     font-family: 'Poppins', sans-serif;
@@ -38,6 +42,24 @@ h2{
     color: #363f5f;
     font-weight: normal;
 }
+/*===================LINKS & BUTTONS===================*/
+
+a{
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3DD705;
+
+}
+
+.button.new{
+    margin-bottom: .8rem;
+    display: inline-block;
+}
+
+
 /*===================HEADER===================*/
 header{
     background: #2d4a22;
@@ -101,6 +123,12 @@ table tbody tr td:first-child{
 
 }
 
+table thead tr th:last-child, 
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+
+}
+
 table thead th{
     background: white;
     text-align: left;
@@ -140,6 +168,20 @@ footer{
     color: var(--dark-blue);
     opacity: 0.6;
 }
+
+/*===================RESPONSIVE===================*/s
+
+@media(min-width: 800px){
+    html{
+        font-size: 87.5%;/*14px*/
+    }
+
+    #ballance{
+        display: grid;
+    }
+}
+
+
 
 
 
