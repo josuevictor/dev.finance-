@@ -111,10 +111,16 @@ header{
     color: white;
 }
 /*===================TABLE===================*/
+#transaction{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 #data-table{
-    width: 100%;/*pegar todo espaço do container que está inserido*/
     border-spacing: 0 0.5rem;
     color: var(--dark-blue);
+    width: 100%;
 }
 
 table thead tr th:first-child, 
@@ -161,7 +167,37 @@ td.income{
 td.expense{
     color: #e92929;
 }
+ /*===================MODAL===================*/
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+
+    background-color:  rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: #F0F2F5;
+    padding: 2.4rem;
+}
+
+
+
  /*===================FOOTER===================*/
+
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
@@ -169,15 +205,18 @@ footer{
     opacity: 0.6;
 }
 
-/*===================RESPONSIVE===================*/s
+/*===================RESPONSIVE===================*/
 
-@media(min-width: 800px){
+@media (min-width: 800px) {
+
     html{
         font-size: 87.5%;/*14px*/
     }
 
-    #ballance{
+    #balance{
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
