@@ -1,6 +1,9 @@
 /*===================GLOBAL===================*/
 :root{
     --dark-blue: #363f5f;
+    --green: #49AA26;
+    --light-green: #3DD705;
+    --red: #E92929;
 }
 
 *{
@@ -45,7 +48,7 @@ h2{
 /*===================LINKS & BUTTONS===================*/
 
 a{
-    color: #49aa26;
+    color: var(--green);
     text-decoration: none;
 }
 
@@ -54,10 +57,46 @@ a:hover{
 
 }
 
+button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: var(--green);
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+button:hover{
+    background-color: var(--light-green);
+}
+
 .button.new{
     margin-bottom: .8rem;
     display: inline-block;
 }
+
+.button.cancel{
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+    
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+
+}
+
+.button.cancel:hover{
+
+    opacity: 1;
+
+}
+
 
 
 /*===================HEADER===================*/
@@ -107,7 +146,7 @@ header{
 }
 
 .card.total{
-    background: #49aa26;
+    background: var(--green);
     color: white;
 }
 /*===================TABLE===================*/
@@ -174,17 +213,18 @@ td.expense{
     height: 100%;
 
     background-color:  rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+
     position: fixed;
     top: 0;
 
     display: flex;
-    justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
+    justify-content: center;
 }
 
-.modal-overlay.active{
+.active{
     opacity: 1;
     visibility: visible;
 }
@@ -192,18 +232,55 @@ td.expense{
 .modal{
     background: #F0F2F5;
     padding: 2.4rem;
+    position: relative;
 }
 
+ /*===================FORM===================*/
 
+#form{
+     max-width: 500px;
+}
+
+#form h2{
+    margin-top: 0;
+}
+
+input{
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+
+    width: 100%;
+}
+
+.input-group{
+    margin-top: 0.8rem;
+}
+
+.input-group small{
+    opacity: .4;
+}
+
+.input-group.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.input-group.actions .button,
+.input-group.actions button{
+    width: 48%;
+}
 
  /*===================FOOTER===================*/
+ 
 
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
     color: var(--dark-blue);
     opacity: 0.6;
-}
 
 /*===================RESPONSIVE===================*/
 

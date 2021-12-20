@@ -92,16 +92,17 @@
                 </table>
             </section>
         </main>
-        <div class="modal-overlay active">
+
+        <div class="modal-overlay">
             <div class="modal">
                 <h2>Nova Transação</h2>
                 <form action="">
                     <div class="input-group">
-                        <label class="sr-only" for="description">Descrição</label>
+                        <label class="sr-only" for="date">Data</label>
                         <input 
-                            type="text"
-                            name="description" 
-                            id="description"
+                            type="date"
+                            name="date" 
+                            id="date"
                             placeholder="Descrição"
                         />
                     </div>
@@ -115,10 +116,45 @@
                             placeholder="0,00"
                             step="0.01"
                         />
+
+                    <small class="help">Use o sinal -(negativos) para despesas e , (vírgula) para casas decimais.</small>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Descrição</label>
+                        <input 
+                            type="text"
+                            name="description" 
+                            id="description"
+                            placeholder="Descrição"
+                        />
+                    </div>
+                        <div class="input-group actions">
+                        
+                            <a href="#" class="button cancel">Cancelar</a>
+                            <button>Salvar</button>
+                            
+                        </div>
+
                     </div>
                 </form>
             </div>
         </div>
         <footer>dev.finance$</footer>
+
+
+        <script>
+            Modal ={
+                open(){
+                    //abre modal
+                    //adciona a classe active para mostrar o modal.
+                },
+
+                close(){
+
+                }
+            }
+        </script>
+
+
     </body>
 </html>
