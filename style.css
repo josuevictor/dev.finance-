@@ -222,6 +222,8 @@ td.expense{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 999;
 }
 
 .active{
@@ -233,6 +235,7 @@ td.expense{
     background: #F0F2F5;
     padding: 2.4rem;
     position: relative;
+    z-index: ;
 }
 
  /*===================FORM===================*/
@@ -281,6 +284,7 @@ footer{
     padding: 4rem 0 2rem;
     color: var(--dark-blue);
     opacity: 0.6;
+}
 
 /*===================RESPONSIVE===================*/
 
@@ -296,9 +300,3 @@ footer{
         gap: 2rem;
     }
 }
-
-
-
-
-
-
