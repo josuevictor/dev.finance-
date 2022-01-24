@@ -126,7 +126,6 @@ header{
     background: white;
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
-
     margin-bottom: 2rem;
     color: var(--dark-blue);
 }
@@ -235,9 +234,8 @@ td.expense{
     background: #F0F2F5;
     padding: 2.4rem;
     position: relative;
-    z-index: ;
-}
 
+}
  /*===================FORM===================*/
 
 #form{
